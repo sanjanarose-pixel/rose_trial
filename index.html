@@ -3,194 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjana Sujith - Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sanjana Sujith - Personal Website</title>
     <style>
+        /* Resetting default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
         }
 
         body {
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            min-height: 100vh;
+            background: #87CEEB; /* Sky Blue */
+            color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #FFD700; /* Golden */
+            color: white;
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            color: white;
+            border-bottom: 5px solid #FF8C00; /* Dark Orange */
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
         }
 
-        section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid #764ba2;
-            transition: transform 0.3s ease;
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
 
-        section:hover {
-            transform: translateY(-5px);
+        /* Wave and Shell background */
+        header::before {
+            content: url('https://img.icons8.com/ios/452/shell.png');
+            display: block;
+            margin: 1rem auto;
+            width: 50px;
+            opacity: 0.7;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        h2 {
-            color: #764ba2;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 0.5rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            color: white;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: scale(1.05);
-        }
-
-        .languages {
+        /* Main content area */
+        .content {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            justify-content: center;
+            padding: 3rem;
+            background: linear-gradient(to bottom, #00BFFF, #87CEFA); /* Ocean Blue Gradient */
         }
 
-        .language-tag {
-            background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
-            color: #2d3748;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .language-tag:hover {
-            transform: scale(1.1);
-        }
-
-        .interests {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .interest-card {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 1.5rem;
+        .content div {
+            background-color: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .interest-card h3 {
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-                margin: 1rem 0;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Sanjana Sujith</h1>
-        <p>AI Student at MITS, Puthencurz</p>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>I'm an Artificial Intelligence student at MITS, Puthencurz with a passion for problem-solving and quick learning. Currently participating in TinkerHack, an event by TinkerHub.</p>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Java (Intermediate)</div>
-                <div class="skill-item">Python (Intermediate)</div>
-                <div class="skill-item">Problem Solving</div>
-                <div class="skill-item">Quick Learning</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Languages</h2>
-            <div class="languages">
-                <span class="language-tag">English</span>
-                <span class="language-tag">Hindi</span>
-                <span class="language-tag">French</span>
-                <span class="language-tag">Malayalam</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Interests & Hobbies</h2>
-            <div class="interests">
-                <div class="interest-card">
-                    <h3>Reading</h3>
-                    <p>Passionate about classical and romance novels</p>
-                </div>
-                <div class="interest-card">
-                    <h3>Dancing</h3>
-                    <p>Enthusiastic dancer with a fun-loving spirit</p>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+            padding: 1.5rem;
+            margin: 1rem;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-alig
